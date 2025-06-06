@@ -1,0 +1,9 @@
+--------------------------
+Product View
+url: https://beintosh.com/digitalmonk/index.php
+--------------------------
+Dashboard login
+url: https://beintosh.com/digitalmonk/login.php
+username: Admin@digitalmonk.org
+password: digital_monk@0606
+--------------------------
