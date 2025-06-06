@@ -14,7 +14,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="asset/product-style.css">
+<link rel="stylesheet" type="text/css" href="asset/product-updated-style.css">
   
   </head>
   <body class="d-flex flex-column">
@@ -36,7 +36,7 @@
 
                                   <li class="nav-item"><a class="nav-link" href="login.php">Dashboard</a></li>
 
-                                  <li class="nav-item"><a class="nav-link active text-gradient" href="portfolio.php">Product Grid</a></li>
+                                  <li class="nav-item"><a class="nav-link active text-gradient" href="product-grid.php">Product Grid</a></li>
 
                                   
 
@@ -50,25 +50,25 @@
 
                   </nav>
       <!-- Page Content -->
-      <section class="py-5">
-        <div class="container py-4">
-          <div class=" bg-light-pink">
-            <div class="row mb-4">
-              <h4 class="fw-bold mb-3">Our Online Services</h4>
-              
-              <!-- Search + View All -->
-              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3">
-                
-                <div class="input-group search-box w-100 w-md-auto">
-                  <input type="text" id="searchBox" class="form-control" placeholder="Search for pujas..." />
-                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <div class="page-wrapper">
+
+          <!-- Service Header -->
+          <div class="services-header">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+              <h2 class="mb-2">Our Online Services</h2>
+              <div class="search-box-wrapper">
+                <div class="search-box">
+                  <input type="text" placeholder="Search for pujas..." id="searchBox" />
+                  <i class="bi bi-search ms-2"></i>
                 </div>
               </div>
-              <!-- Category Scroll -->
-              
-              
-              <h5 class="fw-bold mb-3">Explore Pujas By Category</h5>
-              <div class="category-scroll d-flex overflow-auto gap-3 pb-2">
+            </div>
+
+            <!-- Categories Scroll -->
+            <div class="d-flex align-items-center">
+              <div class="category-scroll">
+                <!-- Repeat dynamically -->
+               
                 <div class="category-card text-center" data-category="">
                   <img src="asset/categories/all.svg" class="category-icon mb-2" alt="All" />
                   <div class="category-label">All</div>
@@ -97,29 +97,18 @@
                   <img src="asset/categories/festival.svg" class="category-icon mb-2" alt="Festive" />
                   <div class="category-label">Festive</div>
                 </div>
+                <!-- more -->
               </div>
-              
+              <button class="view-all">View All ▼</button>
             </div>
           </div>
-          <div class="">
-            <div class="row mb-3">
-              <div class="col-12 d-flex flex-wrap gap-2" id="tagFilters">
-                <!-- AJAX will insert tags here -->
-              </div>
-            </div>
-            <div id="projectGrid" class="row g-4">
-              <!-- Projects will load here -->
-            </div>
-            <div class="text-center mt-4">
-              <button id="loadMoreBtn" class="btn  btn-design">Load More</button>
-            </div>
-          </div>
-          
-          
-          
-        </div>
 
-      </section>
+          <!-- Product Grid -->
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 product-grid" id="projectGrid">
+            
+          </div>
+
+        </div>
     </main>
 
     
@@ -152,14 +141,13 @@
 
 </footer>
 
-
-
    <!-- Bootstrap core JS-->
 
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="asset/product-data.js" type="text/javascript">
+       <script src="asset/product-data-update.js" type="text/javascript">
         
-        </script>
+        
+        </script> 
 
     
   </body>
